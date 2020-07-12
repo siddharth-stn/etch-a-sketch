@@ -1,0 +1,1 @@
+Making Etch-a-Sketch project precribed in the course syllabus of THE ODIN PROJECT Web Development 101.
