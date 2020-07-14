@@ -26,18 +26,17 @@ gridBtn.addEventListener("click", () => {
         count += 1;
     }
 });
+
 containerDiv.addEventListener("mouseover", (event) => {
-    if (noOfDivs > 0) {
-        containerDiv.addEventListener("mouseover", (event) => {
-            if (event.target.id  != "container") {
-                event.target.style.backgroundColor = "red";
-            }
-        });
-        containerDiv.addEventListener("mouseout", (event) => {
-            event.target.style.backgroundColor = "";
-        });  
+    if (event.target.id  != "container") {
+        event.target.style.backgroundColor = "red";
     }
 });
+       
+containerDiv.addEventListener("mouseout", (event) => {
+    event.target.style.backgroundColor = "";
+});  
+
 
 
 
