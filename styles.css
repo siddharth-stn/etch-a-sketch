@@ -101,11 +101,11 @@ main {
 
 .container {
     background-color: azure;
-    border: 2px solid gray;
-    min-width: 960px;
-    margin-right: 50px;
-    margin-left: 50px;
+    border: 10px solid gray;
+    width: 970px;
+    margin-right: 70px;
     padding: 20px;
+    box-shadow: 9px 10px 8px rgba(112, 128, 144, 0.8);
 }
 
 footer {
