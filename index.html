@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./script.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="outerContainer">
+        <header>
+            <h1>Etch-a-Sketch</h1>
+        </header>
+        <main>
+            <div class="btnDiv">
+                <div class="colorChoice">
+                    <input id="color" type="color" class="colorPicker"></input>
+                    <label class="colorBtn" for="color"><label/>
+                    <span>Color Picker</span>
+                </div>
+                <div class="rainbowPen">
+                    <div class="rainbowPicker"></div>
+                    <span>Rainbow Picker</span>
+                </div>
+                <div class="clearBtn">Clear</div>
+                <input class="gridSize" type="number" min="20" max="100" placeholder="Enter grid size">
+            </div>
+            <div class="container"></div>
+        </main>
+        <footer>
+            &copy; Sketchy&trade;
+        </footer>
+    </div>
+</body>
+</html>

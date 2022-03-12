@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Permanent+Marker&family=Roboto&display=swap');
+
+html {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+}
+
+.outerContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.9rem;
+    font-family: 'Permanent Marker', cursive;
+    border-bottom: 1px solid saddlebrown;
+    box-shadow: inset 0 0 2rem saddlebrown;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    padding: 20px;
+    background-color: rgba(117, 96, 107, 0.32);
+}
+
+.btnDiv {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.colorPicker {
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+    height: 50px;
+}
+
+.colorBtn {
+    display: inline-block;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background: black;
+}
+
+.colorChoice span {
+    position: relative;
+    left: -6px;
+    text-align: center;
+    display: block;
+    margin-top: 80px;
+    min-width: max-content;
+}
+
+.rainbowPen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.rainbowPicker {
+    background-image: linear-gradient(to bottom, red,orange,yellow,green,blue,indigo,violet);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.clearBtn {
+    border-radius: 3px;
+    background-color: cornflowerblue;
+    color: white;
+    width: 70px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.gridSize {
+    padding: 5px;
+    border: 2px solid gray;
+    width: 100px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.container {
+    background-color: azure;
+    border: 2px solid gray;
+    min-width: 960px;
+    margin-right: 50px;
+    margin-left: 50px;
+    padding: 20px;
+}
+
+footer {
+    border-top: 1px solid slategrey;
+    box-shadow: inset 0 0 2rem slateblue;
+    padding: 10px;
+    text-align: center;
+    font-family: 'Cookie', cursive;
+    font-size: 1.2rem;
+}
