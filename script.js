@@ -72,13 +72,5 @@ function etchOnBoard (event) {
                 }
             }
         });
-        if (pickedColor.length > 7) {
-            event.target.style["background-image"] = pickedColor;
-        } else {
-            event.target.style["background-image"] = `linear-gradient(${pickedColor}, ${pickedColor}`;
-        }
-    } 
-
-
-    
+    }
 }
