@@ -66,7 +66,7 @@ function etchOnBoard (event) {
             });
             if (div.target.className !== "container") {
                 if (pickedColor.length > 7) {
-                    div.target.style["background-image"] = pickedColor;
+                    div.target.style["background-image"] = pickedColor; //when rainbow color is picked
                 } else {
                     div.target.style["background-image"] = `linear-gradient(${pickedColor}, ${pickedColor}`;
                 }
