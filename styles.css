@@ -34,6 +34,7 @@ main {
 }
 
 .btnDiv {
+    max-width: 500px;
     padding: 20px;
     flex: 1;
     display: flex;
