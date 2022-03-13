@@ -8,6 +8,7 @@ html {
 *, *::before, *::after {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .outerContainer {
@@ -29,7 +30,7 @@ main {
     flex: 1;
     display: flex;
     padding: 20px;
-    background-color: rgba(117, 96, 107, 0.32);
+    background-color: rgba(141, 115, 65, 0.411);
 }
 
 .btnDiv {
@@ -53,7 +54,7 @@ main {
     height: 70px;
     width: 70px;
     border-radius: 50%;
-    background: black;
+    background-image: linear-gradient(black, black);
 }
 
 .colorChoice span {
@@ -73,7 +74,7 @@ main {
 }
 
 .rainbowPicker {
-    background-image: linear-gradient(to bottom, red,orange,yellow,green,blue,indigo,violet);
+    background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
     width: 70px;
     height: 70px;
     border-radius: 50%;
@@ -87,25 +88,38 @@ main {
     height: 30px;
     line-height: 30px;
     text-align: center;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.clearBtn:hover {
+    transform: scale(1.1);
+    border: 1px solid yellow;
+    box-shadow: 0 0 1.8rem yellow;
 }
 
 .gridSize {
     padding: 5px;
     border: 2px solid gray;
-    width: 100px;
-    height: 20px;
+    width: 110px;
+    height: 30px;
     line-height: 20px;
     text-align: center;
     font-size: 0.8rem;
 }
 
 .container {
+    display: flex;
     background-color: azure;
     border: 10px solid gray;
-    width: 970px;
+    width: 980px;
     margin-right: 70px;
-    padding: 20px;
     box-shadow: 9px 10px 8px rgba(112, 128, 144, 0.8);
+    flex-wrap: wrap;
+}
+
+.container div {
+    flex-grow: 1;
 }
 
 footer {
@@ -116,3 +130,4 @@ footer {
     font-family: 'Cookie', cursive;
     font-size: 1.2rem;
 }
+
