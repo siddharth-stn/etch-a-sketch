@@ -45,7 +45,8 @@ gridSize.addEventListener('change', function (e) {
     childDivsArray = Array.from(container.children);
 
     // drawing on the board function call
-    childDivsArray.forEach(div => div.addEventListener('mouseover', etchOnBoard));
+    // childDivsArray.forEach(div => div.addEventListener('mousedown', etchOnBoard));
+    container.addEventListener('mousedown', etchOnBoard);
 });
 
 //to display the picked color as a background of the color picker and store the color value in pickedColor variable
@@ -55,11 +56,29 @@ colorPen.addEventListener('change', function (e) {
 });
 
 //function to etch on board cells
-function etchOnBoard (div) {
-    console.log(pickedColor.length);
-    if (pickedColor.length > 7) {
-        div.target.style["background-image"] = pickedColor;
-    } else {
-        div.target.style["background-image"] = `linear-gradient(${pickedColor}, ${pickedColor}`;
-    }
+function etchOnBoard (event) {
+    if (event.target.className !== "container") {
+        //to continue etching over the board until mouse button is released
+        container.addEventListener('mouseover', function _mouseover (div) {
+            //to remove etching on board when mouse button is released
+            container.addEventListener('mouseup', function () {
+                container.removeEventListener('mouseover', _mouseover);
+            });
+            if (div.target.className !== "container") {
+                if (pickedColor.length > 7) {
+                    div.target.style["background-image"] = pickedColor;
+                } else {
+                    div.target.style["background-image"] = `linear-gradient(${pickedColor}, ${pickedColor}`;
+                }
+            }
+        });
+        if (pickedColor.length > 7) {
+            event.target.style["background-image"] = pickedColor;
+        } else {
+            event.target.style["background-image"] = `linear-gradient(${pickedColor}, ${pickedColor}`;
+        }
+    } 
+
+
+    
 }
